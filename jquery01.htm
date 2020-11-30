@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#toc").hide();
+            $("#show").click(function () {
+                $("#toc").delay(2000).show("slow");
+                $(".tocnumber").css({"background-color": "gray"})
+            });
+            $("#hide").click(function () {
+                $("#toc").delay(2000).hide("slow");
+                $(".tocnumber").css({"background-color": "white"})
+            });
+            $(".header")
+                .css({ "background-color": "yellow" })
+                .hide()
+                .delay(1500).show("slow");
+        });
+    </script>
+
+    <title>jQuery</title>
+</head>
+
+<body>
+    <button id="show">Show Index</button>
+    <button id="hide">Hide Index</button>
+    <table id="toc">
+        <tr>
+            <td class="tocnumber">1</td>
+        </tr>
+    </table>
+
+    <div class="header">
+        header
+    </div>
+</body>
+
+</html>
